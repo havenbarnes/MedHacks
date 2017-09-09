@@ -1,26 +1,24 @@
 //
 //  UIViewController+Extensions.swift
-//  Funnel
 //
 //  Created by Haven Barnes on 4/6/17.
-//  Copyright © 2017 Funnel. All rights reserved.
 //
 
 import UIKit
 import SafariServices
 
 extension UIViewController {
-    func instantiate(_ identifier: String, storyboard: String) -> UIViewController {
+    func instantiate(_ identifier: String, storyboard: String = "Main") -> UIViewController {
         let viewController = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(withIdentifier: identifier)
         return viewController
     }
     
-    func present(_ identifier: String, storyboard: String) {
+    func present(_ identifier: String, storyboard: String = "Main") {
         let viewController = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(withIdentifier: identifier)
         self.present(viewController, animated: true, completion: nil)
     }
     
-    func show(_ identifier: String, storyboard: String) {
+    func show(_ identifier: String, storyboard: String = "Main") {
         let viewController = UIStoryboard(name: storyboard, bundle: nil).instantiateViewController(withIdentifier: identifier)
         self.show(viewController, sender: self)
     }

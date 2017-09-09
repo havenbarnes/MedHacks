@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Bond
 class PatientTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var roomLabel: UILabel!
@@ -16,11 +16,11 @@ class PatientTableViewCell: UITableViewCell {
     
     var patient: Patient! {
         didSet {
-            nameLabel.text = patient.name
-            roomLabel.text = patient.room
+            patient.name.bind(to: nameLabel)
+            patient.room.bind(to: roomLabel)
             statusView.backgroundColor = patient.statusColor
-            if patient.status != .turning {
-                statusLabel.text = patient.status.rawValue
+            if patient.status.value != .turning {
+                statusLabel.text = patient.status.value.rawValue
             }
         }
     }

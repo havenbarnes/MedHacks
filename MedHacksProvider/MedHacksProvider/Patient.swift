@@ -8,12 +8,13 @@
 
 import Foundation
 import SwiftyJSON
+import Bond
 
 enum PatientStatus: String {
     case turning = "Turning"
     case back = "Back"
-    case left = "Left"
-    case right = "Right"
+    case left = "Left Side"
+    case right = "Right Side"
     
     static func from(string: String) -> PatientStatus {
         var status: PatientStatus
@@ -36,27 +37,46 @@ enum PatientStatus: String {
         }
         return status
     }
+    
+    var intValue: Int {
+        switch self {
+        case .left:
+            return 1
+        case .back:
+            return 0
+        case .right:
+            return -1
+        default:
+            return 0
+        }
+    }
 }
 
 class Patient {
-    var name: String
-    var room: String
-    var notes: String
-    var status: PatientStatus
-    var lastRolled: Date
+    var id: Int
+    var name: Observable<String>
+    var room: Observable<String>
+    var notes: Observable<String>
+    var status: Observable<PatientStatus>
+    var lastRolled: Observable<Date>
+    var deviceName: Observable<String>
+    var deviceBattery: Observable<Int>
     
     init(_ json: JSON) {
-        name = json["name"].stringValue
-        room = json["room"].stringValue
-        notes = json["notes"].stringValue
-        status = PatientStatus.from(string: json["status"].stringValue)
-        lastRolled = json["lastRolled"].dateValue
+        id = json["id"].intValue
+        name = Observable(json["name"].stringValue)
+        room = Observable(json["room"].stringValue)
+        notes = Observable(json["notes"].stringValue)
+        status = Observable(PatientStatus.from(string: json["status"].stringValue))
+        lastRolled = Observable(json["lastRolled"].dateValue)
+        deviceName = Observable(json["client"]["name"].stringValue)
+        deviceBattery = Observable(json["client"]["battery"].intValue)
     }
     
     var statusColor: UIColor? {
         let startColor = UIColor.green
         let endColor = UIColor.red
-        let timeElapsed = Date().timeIntervalSince(lastRolled)
+        let timeElapsed = Date().timeIntervalSince(lastRolled.value)
         let percentage = CGFloat(timeElapsed / 7200)
         if percentage > 1 { return UIColor.purple }
         return startColor.interpolateColorTo(end: endColor, fraction: percentage)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56B1D5468D7DCD7995EE20C8 /* Pods_MedHacksProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB93607C5B239180B2611771 /* Pods_MedHacksProvider.framework */; };
+		811D2A5B1F644C6C00657218 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811D2A5A1F644C6C00657218 /* Date+Extensions.swift */; };
 		812C40781F63A4E3009804B1 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C40771F63A4E3009804B1 /* Patient.swift */; };
 		812C407C1F63AB1E009804B1 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C407B1F63AB1E009804B1 /* PatientTableViewCell.swift */; };
 		812C408F1F63ADB6009804B1 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C407E1F63ADB6009804B1 /* Dictionary+Extensions.swift */; };
@@ -29,10 +30,12 @@
 		815C3BD21F638DA7006F0C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BD11F638DA7006F0C94 /* Assets.xcassets */; };
 		815C3BD51F638DA7006F0C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BD31F638DA7006F0C94 /* LaunchScreen.storyboard */; };
 		815C3BDF1F639B15006F0C94 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BDE1F639B15006F0C94 /* GoogleService-Info.plist */; };
+		816732161F64350900D364E9 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816732151F64350900D364E9 /* PatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7DE904271EF2D210AD57E013 /* Pods-MedHacksProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacksProvider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacksProvider/Pods-MedHacksProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		811D2A5A1F644C6C00657218 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "Extensions/Date+Extensions.swift"; sourceTree = "<group>"; };
 		812C40771F63A4E3009804B1 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		812C407B1F63AB1E009804B1 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		812C407E1F63ADB6009804B1 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extensions.swift"; path = "Extensions/Dictionary+Extensions.swift"; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		815C3BD41F638DA7006F0C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		815C3BD61F638DA7006F0C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815C3BDE1F639B15006F0C94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		816732151F64350900D364E9 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		8219937871DFE6B148D3944A /* Pods-MedHacksProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacksProvider.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacksProvider/Pods-MedHacksProvider.release.xcconfig"; sourceTree = "<group>"; };
 		BB93607C5B239180B2611771 /* Pods_MedHacksProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedHacksProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 				812C408C1F63ADB6009804B1 /* UIImage+Extensions.swift */,
 				812C408D1F63ADB6009804B1 /* UIView+Extensions.swift */,
 				812C408E1F63ADB6009804B1 /* UIViewController+Extensions.swift */,
+				811D2A5A1F644C6C00657218 /* Date+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				812C407B1F63AB1E009804B1 /* PatientTableViewCell.swift */,
 				813DBE401F63A3E300FB095C /* PatientTableModel.swift */,
 				812C40771F63A4E3009804B1 /* Patient.swift */,
+				816732151F64350900D364E9 /* PatientViewController.swift */,
 			);
 			name = Patient;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 				812C40911F63ADB6009804B1 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				812C40991F63ADB6009804B1 /* UIView+Extensions.swift in Sources */,
 				815C3BCD1F638DA7006F0C94 /* PatientTableViewController.swift in Sources */,
+				816732161F64350900D364E9 /* PatientViewController.swift in Sources */,
+				811D2A5B1F644C6C00657218 /* Date+Extensions.swift in Sources */,
 				812C40781F63A4E3009804B1 /* Patient.swift in Sources */,
 				812C408F1F63ADB6009804B1 /* Dictionary+Extensions.swift in Sources */,
 				812C40961F63ADB6009804B1 /* String+Extensions.swift in Sources */,

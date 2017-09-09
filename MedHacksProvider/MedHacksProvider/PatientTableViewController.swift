@@ -9,9 +9,11 @@
 import UIKit
 import Firebase
 import Bond
+import ReactiveKit
 
 class PatientTableViewController: UIViewController {
 
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel = PatientTableModel()
@@ -30,7 +32,33 @@ class PatientTableViewController: UIViewController {
             return cell
         }
         
-        tableView.selected
+        _ = tableView.selectedRow.observeNext { row in
+            self.tableView.deselectRow(at: IndexPath(row: row, section: 0),
+                                       animated: true)
+            
+            let patientViewController = self.instantiate("sbPatientViewController") as! PatientViewController
+            patientViewController.patient = self.viewModel.patients[row]
+            self.present(patientViewController, animated: true, completion: nil)
+    
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateFormat = "EEEE, MMMM d"
+        dateLabel.text = dateFormatter.string(from: Date()).uppercased()
     }
 }
 
+extension ReactiveExtensions where Base: UITableView {
+    public var delegate: ProtocolProxy {
+        return base.protocolProxy(for: UITableViewDelegate.self, setter: NSSelectorFromString("setDelegate:"))
+    }
+}
+
+extension UITableView {
+    var selectedRow: Signal<Int, NoError> {
+        return reactive.delegate.signal(for: #selector(UITableViewDelegate.tableView(_:didSelectRowAt:))) { (subject: PublishSubject<Int, NoError>, _: UITableView, indexPath: NSIndexPath) in
+            subject.next(indexPath.row)
+        }
+    }
+}

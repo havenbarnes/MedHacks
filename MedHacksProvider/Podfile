@@ -10,4 +10,5 @@ target 'MedHacksProvider' do
   pod 'Firebase/Database'
   pod 'SwiftyJSON'
   pod 'Bond'
+  pod 'FSLineChart'
 end
