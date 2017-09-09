@@ -12,6 +12,7 @@
 		815C3BB21F638CB3006F0C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BB01F638CB3006F0C94 /* Main.storyboard */; };
 		815C3BB41F638CB3006F0C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BB31F638CB3006F0C94 /* Assets.xcassets */; };
 		815C3BB71F638CB3006F0C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BB51F638CB3006F0C94 /* LaunchScreen.storyboard */; };
+		815C3BDD1F639270006F0C94 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C3BDC1F639270006F0C94 /* MotionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		815C3BB31F638CB3006F0C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		815C3BB61F638CB3006F0C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		815C3BB81F638CB3006F0C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815C3BDC1F639270006F0C94 /* MotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				815C3BAC1F638CB3006F0C94 /* AppDelegate.swift */,
 				815C3BAE1F638CB3006F0C94 /* ViewController.swift */,
+				815C3BDC1F639270006F0C94 /* MotionManager.swift */,
 				815C3BB01F638CB3006F0C94 /* Main.storyboard */,
 				815C3BB31F638CB3006F0C94 /* Assets.xcassets */,
 				815C3BB51F638CB3006F0C94 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				815C3BAF1F638CB3006F0C94 /* ViewController.swift in Sources */,
+				815C3BDD1F639270006F0C94 /* MotionManager.swift in Sources */,
 				815C3BAD1F638CB3006F0C94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +308,7 @@
 				815C3BBD1F638CB3006F0C94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
