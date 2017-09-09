@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, MotionManagerDelegate {
     
+    @IBOutlet weak var orientationLabel: UILabel!
+    
     @IBOutlet weak var gX: UILabel!
     @IBOutlet weak var gY: UILabel!
     @IBOutlet weak var gZ: UILabel!
@@ -17,26 +19,43 @@ class ViewController: UIViewController, MotionManagerDelegate {
     @IBOutlet weak var aY: UILabel!
     @IBOutlet weak var aZ: UILabel!
     
+    let manager = MotionManager()
+    var running = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-    @IBAction func startMonitoringPressed(_ sender: Any) {
-        let manager = MotionManager()
         manager.delegate = self
     }
+
+    @IBAction func startMonitoringPressed(_ sender: Any) {
+        let button = sender as! UIButton
+        if !running {
+            button.setTitle("Stop Monitoring", for: .normal)
+            button.backgroundColor = UIColor.red
+            manager.start()
+        } else {
+            button.setTitle("Start Monitoring", for: .normal)
+            button.backgroundColor = UIColor.green
+            manager.stop()
+        }
+        running = !running
+    }
     
+    var dataString = ""
     var i = 0
-    func didUpdate(_ motion: Motion) {
-        print(motion)
+    
+    func didUpdate(orientation: Orientation) {
+        if orientation == .turning {
+            orientationLabel.text = "Turning"    
+            return
+        }
+        orientationLabel.text = "Laying On: \(orientation.rawValue)"
+    }
+    
+    func didUpdate(motion: Motion) {
+        
+        //dataString += "\(motion.gyroX),\(motion.gyroX),\(motion.gyroX),"
+        //    + "\(motion.accelX),\(motion.accelY),\(motion.accelZ)\n"
         
         i += 1
         

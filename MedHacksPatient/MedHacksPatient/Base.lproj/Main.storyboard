@@ -23,8 +23,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyR-UE-rZR">
-                                <rect key="frame" x="97.5" y="243.5" width="180" height="180"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="97" y="243.5" width="180" height="180"/>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.83137254900000002" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="LP0-Wy-jwn"/>
                                     <constraint firstAttribute="height" constant="180" id="v2N-pj-g5U"/>
@@ -42,8 +42,8 @@
                                     <action selector="startMonitoringPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q74-3h-jgq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gyro X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNe-Cj-MSd">
-                                <rect key="frame" x="16" y="456" width="62" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gyro X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNe-Cj-MSd">
+                                <rect key="frame" x="16" y="456" width="52.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,6 +78,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laying On: Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rl7-FB-BwA">
+                                <rect key="frame" x="56" y="181.5" width="262.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -88,6 +94,7 @@
                             <constraint firstItem="GQ7-dH-W8C" firstAttribute="top" secondItem="lD4-C4-6FJ" secondAttribute="bottom" constant="2" id="6yQ-PD-5M6"/>
                             <constraint firstItem="sdX-UE-SWE" firstAttribute="top" secondItem="xt2-jb-iyR" secondAttribute="bottom" constant="2" id="CCQ-d4-U1T"/>
                             <constraint firstItem="GQ7-dH-W8C" firstAttribute="leading" secondItem="lD4-C4-6FJ" secondAttribute="leading" id="J0o-5H-qeo"/>
+                            <constraint firstItem="ZyR-UE-rZR" firstAttribute="top" secondItem="rl7-FB-BwA" secondAttribute="bottom" constant="20" id="NSl-y9-VDU"/>
                             <constraint firstItem="ZyR-UE-rZR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QQY-Ii-BGc"/>
                             <constraint firstItem="zNe-Cj-MSd" firstAttribute="top" secondItem="ZyR-UE-rZR" secondAttribute="bottom" constant="32.5" id="nnP-0e-gRD"/>
                             <constraint firstAttribute="leadingMargin" secondItem="zNe-Cj-MSd" secondAttribute="leading" id="r0Q-G4-2B3"/>
@@ -95,6 +102,8 @@
                             <constraint firstItem="lD4-C4-6FJ" firstAttribute="top" secondItem="XJH-nL-6no" secondAttribute="bottom" constant="2" id="u08-mR-9IZ"/>
                             <constraint firstItem="xt2-jb-iyR" firstAttribute="top" secondItem="zNe-Cj-MSd" secondAttribute="bottom" constant="2" id="uBp-cF-WR6"/>
                             <constraint firstItem="lD4-C4-6FJ" firstAttribute="leading" secondItem="XJH-nL-6no" secondAttribute="leading" id="uQs-0y-v2e"/>
+                            <constraint firstItem="rl7-FB-BwA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="vtx-Hu-hPq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rl7-FB-BwA" secondAttribute="trailing" constant="40" id="x7w-MK-B6a"/>
                         </constraints>
                     </view>
                     <connections>
@@ -104,6 +113,7 @@
                         <outlet property="gX" destination="zNe-Cj-MSd" id="H4I-Rd-S2z"/>
                         <outlet property="gY" destination="xt2-jb-iyR" id="gw6-gB-dHP"/>
                         <outlet property="gZ" destination="sdX-UE-SWE" id="yIF-vw-E06"/>
+                        <outlet property="orientationLabel" destination="rl7-FB-BwA" id="lvJ-eb-8rl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

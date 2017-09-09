@@ -7,21 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56B1D5468D7DCD7995EE20C8 /* Pods_MedHacksProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB93607C5B239180B2611771 /* Pods_MedHacksProvider.framework */; };
+		812C40781F63A4E3009804B1 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C40771F63A4E3009804B1 /* Patient.swift */; };
+		812C407A1F63A4FE009804B1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C40791F63A4FE009804B1 /* Activity.swift */; };
+		812C407C1F63AB1E009804B1 /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C407B1F63AB1E009804B1 /* PatientTableViewCell.swift */; };
+		812C408F1F63ADB6009804B1 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C407E1F63ADB6009804B1 /* Dictionary+Extensions.swift */; };
+		812C40901F63ADB6009804B1 /* JSON+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C407F1F63ADB6009804B1 /* JSON+Extensions.swift */; };
+		812C40911F63ADB6009804B1 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C40821F63ADB6009804B1 /* TPKeyboardAvoidingCollectionView.m */; };
+		812C40921F63ADB6009804B1 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C40841F63ADB6009804B1 /* TPKeyboardAvoidingScrollView.m */; };
+		812C40931F63ADB6009804B1 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C40861F63ADB6009804B1 /* TPKeyboardAvoidingTableView.m */; };
+		812C40941F63ADB6009804B1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C40881F63ADB6009804B1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		812C40951F63ADB6009804B1 /* NSNumber+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C40891F63ADB6009804B1 /* NSNumber+Extensions.swift */; };
+		812C40961F63ADB6009804B1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C408A1F63ADB6009804B1 /* String+Extensions.swift */; };
+		812C40971F63ADB6009804B1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C408B1F63ADB6009804B1 /* UIColor+Extensions.swift */; };
+		812C40981F63ADB6009804B1 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C408C1F63ADB6009804B1 /* UIImage+Extensions.swift */; };
+		812C40991F63ADB6009804B1 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C408D1F63ADB6009804B1 /* UIView+Extensions.swift */; };
+		812C409A1F63ADB6009804B1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C408E1F63ADB6009804B1 /* UIViewController+Extensions.swift */; };
+		813DBE411F63A3E300FB095C /* PatientTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DBE401F63A3E300FB095C /* PatientTableModel.swift */; };
 		815C3BCB1F638DA7006F0C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C3BCA1F638DA7006F0C94 /* AppDelegate.swift */; };
-		815C3BCD1F638DA7006F0C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C3BCC1F638DA7006F0C94 /* ViewController.swift */; };
+		815C3BCD1F638DA7006F0C94 /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C3BCC1F638DA7006F0C94 /* PatientTableViewController.swift */; };
 		815C3BD01F638DA7006F0C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BCE1F638DA7006F0C94 /* Main.storyboard */; };
 		815C3BD21F638DA7006F0C94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BD11F638DA7006F0C94 /* Assets.xcassets */; };
 		815C3BD51F638DA7006F0C94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BD31F638DA7006F0C94 /* LaunchScreen.storyboard */; };
+		815C3BDF1F639B15006F0C94 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BDE1F639B15006F0C94 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7DE904271EF2D210AD57E013 /* Pods-MedHacksProvider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacksProvider.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacksProvider/Pods-MedHacksProvider.debug.xcconfig"; sourceTree = "<group>"; };
+		812C40771F63A4E3009804B1 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		812C40791F63A4FE009804B1 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		812C407B1F63AB1E009804B1 /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
+		812C407E1F63ADB6009804B1 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extensions.swift"; path = "Extensions/Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		812C407F1F63ADB6009804B1 /* JSON+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "JSON+Extensions.swift"; path = "Extensions/JSON+Extensions.swift"; sourceTree = "<group>"; };
+		812C40811F63ADB6009804B1 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		812C40821F63ADB6009804B1 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		812C40831F63ADB6009804B1 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		812C40841F63ADB6009804B1 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		812C40851F63ADB6009804B1 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		812C40861F63ADB6009804B1 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		812C40871F63ADB6009804B1 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		812C40881F63ADB6009804B1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		812C40891F63ADB6009804B1 /* NSNumber+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSNumber+Extensions.swift"; path = "Extensions/NSNumber+Extensions.swift"; sourceTree = "<group>"; };
+		812C408A1F63ADB6009804B1 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		812C408B1F63ADB6009804B1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "Extensions/UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		812C408C1F63ADB6009804B1 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "Extensions/UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		812C408D1F63ADB6009804B1 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		812C408E1F63ADB6009804B1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		813DBE401F63A3E300FB095C /* PatientTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableModel.swift; sourceTree = "<group>"; };
 		815C3BC71F638DA7006F0C94 /* MedHacksProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedHacksProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815C3BCA1F638DA7006F0C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		815C3BCC1F638DA7006F0C94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		815C3BCC1F638DA7006F0C94 /* PatientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewController.swift; sourceTree = "<group>"; };
 		815C3BCF1F638DA7006F0C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		815C3BD11F638DA7006F0C94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		815C3BD41F638DA7006F0C94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		815C3BD61F638DA7006F0C94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815C3BDE1F639B15006F0C94 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8219937871DFE6B148D3944A /* Pods-MedHacksProvider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MedHacksProvider.release.xcconfig"; path = "Pods/Target Support Files/Pods-MedHacksProvider/Pods-MedHacksProvider.release.xcconfig"; sourceTree = "<group>"; };
+		BB93607C5B239180B2611771 /* Pods_MedHacksProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MedHacksProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +71,81 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56B1D5468D7DCD7995EE20C8 /* Pods_MedHacksProvider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56636DA4232CA80D14628F44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DE904271EF2D210AD57E013 /* Pods-MedHacksProvider.debug.xcconfig */,
+				8219937871DFE6B148D3944A /* Pods-MedHacksProvider.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F612E4EDF22CCBB02D96F2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB93607C5B239180B2611771 /* Pods_MedHacksProvider.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		812C407D1F63ADA0009804B1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				812C407E1F63ADB6009804B1 /* Dictionary+Extensions.swift */,
+				812C407F1F63ADB6009804B1 /* JSON+Extensions.swift */,
+				812C40801F63ADB6009804B1 /* KeyboardAvoidingScrollView */,
+				812C40891F63ADB6009804B1 /* NSNumber+Extensions.swift */,
+				812C408A1F63ADB6009804B1 /* String+Extensions.swift */,
+				812C408B1F63ADB6009804B1 /* UIColor+Extensions.swift */,
+				812C408C1F63ADB6009804B1 /* UIImage+Extensions.swift */,
+				812C408D1F63ADB6009804B1 /* UIView+Extensions.swift */,
+				812C408E1F63ADB6009804B1 /* UIViewController+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		812C40801F63ADB6009804B1 /* KeyboardAvoidingScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				812C40811F63ADB6009804B1 /* TPKeyboardAvoidingCollectionView.h */,
+				812C40821F63ADB6009804B1 /* TPKeyboardAvoidingCollectionView.m */,
+				812C40831F63ADB6009804B1 /* TPKeyboardAvoidingScrollView.h */,
+				812C40841F63ADB6009804B1 /* TPKeyboardAvoidingScrollView.m */,
+				812C40851F63ADB6009804B1 /* TPKeyboardAvoidingTableView.h */,
+				812C40861F63ADB6009804B1 /* TPKeyboardAvoidingTableView.m */,
+				812C40871F63ADB6009804B1 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				812C40881F63ADB6009804B1 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			name = KeyboardAvoidingScrollView;
+			path = Extensions/KeyboardAvoidingScrollView;
+			sourceTree = "<group>";
+		};
+		813DBE421F63A41B00FB095C /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				815C3BCC1F638DA7006F0C94 /* PatientTableViewController.swift */,
+				812C407B1F63AB1E009804B1 /* PatientTableViewCell.swift */,
+				813DBE401F63A3E300FB095C /* PatientTableModel.swift */,
+				812C40771F63A4E3009804B1 /* Patient.swift */,
+				812C40791F63A4FE009804B1 /* Activity.swift */,
+			);
+			name = Patient;
+			sourceTree = "<group>";
+		};
 		815C3BBE1F638DA7006F0C94 = {
 			isa = PBXGroup;
 			children = (
 				815C3BC91F638DA7006F0C94 /* MedHacksProvider */,
 				815C3BC81F638DA7006F0C94 /* Products */,
+				56636DA4232CA80D14628F44 /* Pods */,
+				7F612E4EDF22CCBB02D96F2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +161,13 @@
 			isa = PBXGroup;
 			children = (
 				815C3BCA1F638DA7006F0C94 /* AppDelegate.swift */,
-				815C3BCC1F638DA7006F0C94 /* ViewController.swift */,
+				813DBE421F63A41B00FB095C /* Patient */,
+				812C407D1F63ADA0009804B1 /* Extensions */,
 				815C3BCE1F638DA7006F0C94 /* Main.storyboard */,
 				815C3BD11F638DA7006F0C94 /* Assets.xcassets */,
 				815C3BD31F638DA7006F0C94 /* LaunchScreen.storyboard */,
 				815C3BD61F638DA7006F0C94 /* Info.plist */,
+				815C3BDE1F639B15006F0C94 /* GoogleService-Info.plist */,
 			);
 			path = MedHacksProvider;
 			sourceTree = "<group>";
@@ -71,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 815C3BD91F638DA7006F0C94 /* Build configuration list for PBXNativeTarget "MedHacksProvider" */;
 			buildPhases = (
+				696CFAA5D35A736CB879D58E /* [CP] Check Pods Manifest.lock */,
 				815C3BC31F638DA7006F0C94 /* Sources */,
 				815C3BC41F638DA7006F0C94 /* Frameworks */,
 				815C3BC51F638DA7006F0C94 /* Resources */,
+				D77676163F8B255C4352B6A4 /* [CP] Embed Pods Frameworks */,
+				545E4160D1D3CE0C74B41E57 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				815C3BD51F638DA7006F0C94 /* LaunchScreen.storyboard in Resources */,
+				815C3BDF1F639B15006F0C94 /* GoogleService-Info.plist in Resources */,
 				815C3BD21F638DA7006F0C94 /* Assets.xcassets in Resources */,
 				815C3BD01F638DA7006F0C94 /* Main.storyboard in Resources */,
 			);
@@ -132,13 +244,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		545E4160D1D3CE0C74B41E57 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedHacksProvider/Pods-MedHacksProvider-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		696CFAA5D35A736CB879D58E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D77676163F8B255C4352B6A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MedHacksProvider/Pods-MedHacksProvider-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		815C3BC31F638DA7006F0C94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815C3BCD1F638DA7006F0C94 /* ViewController.swift in Sources */,
+				812C407A1F63A4FE009804B1 /* Activity.swift in Sources */,
+				812C40971F63ADB6009804B1 /* UIColor+Extensions.swift in Sources */,
+				812C40951F63ADB6009804B1 /* NSNumber+Extensions.swift in Sources */,
+				812C40941F63ADB6009804B1 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				812C409A1F63ADB6009804B1 /* UIViewController+Extensions.swift in Sources */,
+				812C40921F63ADB6009804B1 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				812C40911F63ADB6009804B1 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				812C40991F63ADB6009804B1 /* UIView+Extensions.swift in Sources */,
+				815C3BCD1F638DA7006F0C94 /* PatientTableViewController.swift in Sources */,
+				812C40781F63A4E3009804B1 /* Patient.swift in Sources */,
+				812C408F1F63ADB6009804B1 /* Dictionary+Extensions.swift in Sources */,
+				812C40961F63ADB6009804B1 /* String+Extensions.swift in Sources */,
+				812C407C1F63AB1E009804B1 /* PatientTableViewCell.swift in Sources */,
+				812C40901F63ADB6009804B1 /* JSON+Extensions.swift in Sources */,
+				812C40931F63ADB6009804B1 /* TPKeyboardAvoidingTableView.m in Sources */,
+				813DBE411F63A3E300FB095C /* PatientTableModel.swift in Sources */,
 				815C3BCB1F638DA7006F0C94 /* AppDelegate.swift in Sources */,
+				812C40981F63ADB6009804B1 /* UIImage+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +437,7 @@
 		};
 		815C3BDA1F638DA7006F0C94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DE904271EF2D210AD57E013 /* Pods-MedHacksProvider.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P6WDVDEGP6;
@@ -274,6 +451,7 @@
 		};
 		815C3BDB1F638DA7006F0C94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8219937871DFE6B148D3944A /* Pods-MedHacksProvider.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P6WDVDEGP6;
@@ -304,6 +482,7 @@
 				815C3BDB1F638DA7006F0C94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
