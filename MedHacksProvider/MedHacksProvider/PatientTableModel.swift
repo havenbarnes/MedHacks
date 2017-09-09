@@ -6,19 +6,32 @@
 //  Copyright © 2017 Azing. All rights reserved.
 //
 
+import Firebase
 import FirebaseDatabase
+import SwiftyJSON
+import Bond
 
 class PatientTableModel {
     
     var ref: DatabaseReference!
     
-    var patients: [Patient] = []
+    let patients = MutableObservableArray<Patient>()
     
     init() {
+        FirebaseApp.configure()
         ref = Database.database().reference()
     }
     
     func load() {
-        let patientsJson = self.ref.child("patients")
+        self.ref.child("patients").observe(.value, with: {
+            snapshot in
+            
+            var firebasePatients:[Patient] = []
+            for patientJson in snapshot.children.allObjects as! [DataSnapshot] {
+                firebasePatients.append(Patient(JSON(patientJson.value!)))
+            }
+            self.patients.replace(with: firebasePatients)
+        })
+        
     }
 }

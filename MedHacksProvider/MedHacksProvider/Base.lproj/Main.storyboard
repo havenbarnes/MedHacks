@@ -44,7 +44,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="BJf-uK-UNt" customClass="PatientTableViewCell" customModule="MedHacksProvider" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sbPatientCell" rowHeight="60" id="BJf-uK-UNt" customClass="PatientTableViewCell" customModule="MedHacksProvider" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BJf-uK-UNt" id="caC-cj-TIZ">

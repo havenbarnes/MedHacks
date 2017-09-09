@@ -15,8 +15,8 @@ class PatientTableViewCell: UITableViewCell {
     
     var patient: Patient! {
         didSet {
-            nameLabel.text = patient.name
-            roomLabel.text = patient.room
+            self.nameLabel.text = patient.name
+            self.roomLabel.text = patient.room
         }
     }
 }

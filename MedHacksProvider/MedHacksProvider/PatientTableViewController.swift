@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import Bond
 
-class PatientTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PatientTableViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,23 +18,13 @@ class PatientTableViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.patients.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        viewModel.load()
+        viewModel.patients.bind(to: tableView) { patients, indexPath, tableView in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "sbPatientCell", for: indexPath) as! PatientTableViewCell
+            cell.patient = patients[indexPath.row]
+            return cell
+        }
     }
 }
 
