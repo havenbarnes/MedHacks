@@ -10,8 +10,8 @@ import AVFoundation
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-    @IBOutlet var messageLabel:UILabel!
-    @IBOutlet var topbar: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var scope: UIImageView!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -56,6 +56,8 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             videoPreviewLayer?.videoGravity = AVLayerVideoGravityResizeAspectFill
             videoPreviewLayer?.frame = view.layer.bounds
             view.layer.addSublayer(videoPreviewLayer!)
+            view.bringSubview(toFront: backButton)
+            view.bringSubview(toFront: scope)
             
             // Start video capture.
             captureSession?.startRunning()
@@ -88,7 +90,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            messageLabel.text = "No QR/barcode is detected"
+            print("No QR/barcode is detected")
             return
         }
         
@@ -101,11 +103,15 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
+                print(metadataObj.stringValue)
+                backButtonPressed(backButton)
             }
         }
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
 }

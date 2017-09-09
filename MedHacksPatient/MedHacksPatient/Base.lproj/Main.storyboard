@@ -151,6 +151,9 @@
                                     <constraint firstAttribute="height" constant="30" id="SHT-Fz-N0P"/>
                                 </constraints>
                                 <state key="normal" image="down"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="1yR-MN-rhB" eventType="touchUpInside" id="ZBt-sa-KZM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,6 +165,10 @@
                             <constraint firstItem="gqU-Xu-D4X" firstAttribute="centerX" secondItem="9hh-DO-efe" secondAttribute="centerX" id="xRO-mT-eTy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="gqU-Xu-D4X" id="61Y-pO-pdJ"/>
+                        <outlet property="scope" destination="Tj3-cL-lyS" id="EAC-RB-U6g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eje-65-ku7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,11 +9,11 @@
 import Foundation
 import SwiftyJSON
 
-enum PatientStatus {
-    case turning
-    case back
-    case left
-    case right
+enum PatientStatus: String {
+    case turning = "Turning"
+    case back = "Back"
+    case left = "Left"
+    case right = "Right"
     
     static func from(string: String) -> PatientStatus {
         var status: PatientStatus

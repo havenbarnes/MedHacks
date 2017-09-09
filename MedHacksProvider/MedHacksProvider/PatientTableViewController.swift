@@ -19,12 +19,18 @@ class PatientTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 80
+        tableView.tableFooterView = UIView()
+        
         viewModel.load()
         viewModel.patients.bind(to: tableView) { patients, indexPath, tableView in
             let cell = tableView.dequeueReusableCell(withIdentifier: "sbPatientCell", for: indexPath) as! PatientTableViewCell
             cell.patient = patients[indexPath.row]
             return cell
         }
+        
+        tableView.selected
     }
 }
 

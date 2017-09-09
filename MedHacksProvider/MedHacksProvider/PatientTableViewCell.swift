@@ -16,9 +16,12 @@ class PatientTableViewCell: UITableViewCell {
     
     var patient: Patient! {
         didSet {
-            self.nameLabel.text = patient.name
-            self.roomLabel.text = patient.room
-            self.statusView.backgroundColor = patient.statusColor
+            nameLabel.text = patient.name
+            roomLabel.text = patient.room
+            statusView.backgroundColor = patient.statusColor
+            if patient.status != .turning {
+                statusLabel.text = patient.status.rawValue
+            }
         }
     }
 }
