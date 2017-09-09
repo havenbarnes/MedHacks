@@ -1,9 +1,5 @@
 //
 //  String+Extensions.swift
-//  Funnel
-//
-//  Created by Jonathan Hart on 4/13/17.
-//  Copyright © 2017 Funnel. All rights reserved.
 //
 
 import Foundation

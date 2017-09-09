@@ -1,9 +1,7 @@
 //
 //  NSNumber+Extensions.swift
-//  Funnel
 //
 //  Created by Haven Barnes on 4/29/17.
-//  Copyright © 2017 Funnel. All rights reserved.
 //
 
 import Foundation
