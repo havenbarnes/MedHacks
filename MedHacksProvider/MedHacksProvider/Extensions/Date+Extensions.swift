@@ -9,6 +9,14 @@
 import Foundation
 
 extension Date {
+    var json: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        dateFormatter.timeZone = TimeZone(identifier: "UTC")
+        let string = dateFormatter.string(from: self)
+        return string
+    }
+    
     var string: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .none

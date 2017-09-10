@@ -19,10 +19,13 @@ class PatientTableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel = PatientTableModel()
+    var bluetoothManager: BluetoothManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        bluetoothManager = BluetoothManager.shared
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
         tableView.tableFooterView = UIView()

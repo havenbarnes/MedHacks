@@ -32,6 +32,9 @@ class IDViewController: UIViewController, MotionManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let bluetoothManager = BluetoothManager.shared
+        bluetoothManager.start()
+        
         patient = App.shared.patient
         patientImageView.image = patient.image
         backgroundColorView.backgroundColor = patient.statusColor
@@ -98,10 +101,6 @@ class IDViewController: UIViewController, MotionManagerDelegate {
         running = !running
     }
     
-    func didLogin() {
-        HBStatusBarNotification(message: "Login Successful!", backgroundColor: UIColor.blue).show()
-    }
-    
     func didUpdate(orientation: PatientStatus) {
         if !running { return }
         if orientation == .turning {
@@ -121,6 +120,8 @@ class IDViewController: UIViewController, MotionManagerDelegate {
     }
     
     @IBAction func switchPatientButtonPressed(_ sender: Any) {
+        running = false
+        manager.stop()
         dismiss(animated: true, completion: nil)
     }
     

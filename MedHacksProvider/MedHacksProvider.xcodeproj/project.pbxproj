@@ -24,6 +24,7 @@
 		812C40991F63ADB6009804B1 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C408D1F63ADB6009804B1 /* UIView+Extensions.swift */; };
 		812C409A1F63ADB6009804B1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C408E1F63ADB6009804B1 /* UIViewController+Extensions.swift */; };
 		813DBE411F63A3E300FB095C /* PatientTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DBE401F63A3E300FB095C /* PatientTableModel.swift */; };
+		814436F41F6503BD0019BD1A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814436F31F6503BD0019BD1A /* BluetoothManager.swift */; };
 		815C3BCB1F638DA7006F0C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C3BCA1F638DA7006F0C94 /* AppDelegate.swift */; };
 		815C3BCD1F638DA7006F0C94 /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C3BCC1F638DA7006F0C94 /* PatientTableViewController.swift */; };
 		815C3BD01F638DA7006F0C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BCE1F638DA7006F0C94 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		812C408D1F63ADB6009804B1 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Extensions/UIView+Extensions.swift"; sourceTree = "<group>"; };
 		812C408E1F63ADB6009804B1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Extensions/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		813DBE401F63A3E300FB095C /* PatientTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableModel.swift; sourceTree = "<group>"; };
+		814436F31F6503BD0019BD1A /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		815C3BC71F638DA7006F0C94 /* MedHacksProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedHacksProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815C3BCA1F638DA7006F0C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		815C3BCC1F638DA7006F0C94 /* PatientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				815C3BCA1F638DA7006F0C94 /* AppDelegate.swift */,
+				814436F31F6503BD0019BD1A /* BluetoothManager.swift */,
 				813DBE421F63A41B00FB095C /* Patient */,
 				812C407D1F63ADA0009804B1 /* Extensions */,
 				815C3BCE1F638DA7006F0C94 /* Main.storyboard */,
@@ -314,6 +317,7 @@
 				812C408F1F63ADB6009804B1 /* Dictionary+Extensions.swift in Sources */,
 				812C40961F63ADB6009804B1 /* String+Extensions.swift in Sources */,
 				812C407C1F63AB1E009804B1 /* PatientTableViewCell.swift in Sources */,
+				814436F41F6503BD0019BD1A /* BluetoothManager.swift in Sources */,
 				812C40901F63ADB6009804B1 /* JSON+Extensions.swift in Sources */,
 				812C40931F63ADB6009804B1 /* TPKeyboardAvoidingTableView.m in Sources */,
 				813DBE411F63A3E300FB095C /* PatientTableModel.swift in Sources */,

@@ -22,6 +22,8 @@ class PatientTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNeedsStatusBarAppearanceUpdate()
 
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
@@ -49,6 +51,9 @@ class PatientTableViewController: UIViewController {
         dateLabel.text = dateFormatter.string(from: Date()).uppercased()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
     
     @IBAction func addButtonPressed(_ sender: Any) {
         let alertController = UIAlertController(title: "New Patient", message: nil, preferredStyle: .alert)

@@ -1,6 +1,0 @@
-framework module Pods_MedHacksProvider {
-  umbrella header "Pods-MedHacksProvider-umbrella.h"
-
-  export *
-  module * { export * }
-}

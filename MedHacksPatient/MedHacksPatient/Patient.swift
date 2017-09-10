@@ -121,7 +121,7 @@ class Patient {
             "id": id,
             "name": name,
             "room": room,
-            "interval": 60,
+            "interval": 360,
             "notes": "",
             "status": PatientStatus.back.jsonValue,
             "lastRolled": Date().json,
@@ -132,7 +132,6 @@ class Patient {
         ]
         let ref = Database.database().reference()
         ref.child("patients/\(id)").setValue(patientJson)
-    
     }
     
     func update() {

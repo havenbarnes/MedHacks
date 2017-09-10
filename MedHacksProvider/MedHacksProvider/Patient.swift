@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 import Bond
+import HBStatusBarNotification
 import Firebase
 
 enum PatientStatus: String {
@@ -89,6 +90,27 @@ class Patient {
         lastRolled = Observable(json["lastRolled"].dateValue)
         deviceName = Observable(json["client"]["name"].stringValue)
         deviceBattery = Observable(json["client"]["battery"].intValue)
+    }
+    
+    static func checkIn(_ id: String) {
+        let ref = Database.database().reference()
+        ref.child("patients/\(id)/lastProvider").setValue("1")
+        ref.child("patients/\(id)/checkInTime").setValue(Date().json)
+        ref.child("providers/1/lastCheckInTime").setValue(Date().json)
+        ref.child("patients/\(id)/name").observeSingleEvent(of: .value, with: {
+            snapshot in
+            
+            ref.child("providers/1/lastPatient").setValue(snapshot.value)
+            HBStatusBarNotification(message: "Checked In With \(String(describing: snapshot.value))", backgroundColor: UIColor.blue).show()
+        })
+        
+    }
+    
+    static func checkOut(_ id: String) {
+        let ref = Database.database().reference()
+        ref.child("patients/\(id)/checkOutTime").setValue(Date().json)
+        ref.child("providers/1/lastCheckOutTime").setValue(Date().json)
+        HBStatusBarNotification(message: "Checked Out", backgroundColor: UIColor.red).show()
     }
     
     var needsAttention: Bool {

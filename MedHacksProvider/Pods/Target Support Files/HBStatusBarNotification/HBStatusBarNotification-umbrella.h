@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_MedHacksProviderVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_MedHacksProviderVersionString[];
+FOUNDATION_EXPORT double HBStatusBarNotificationVersionNumber;
+FOUNDATION_EXPORT const unsigned char HBStatusBarNotificationVersionString[];
 

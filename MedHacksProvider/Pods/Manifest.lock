@@ -24,6 +24,7 @@ PODS:
   - GoogleToolboxForMac/Defines (2.1.1)
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
+  - HBStatusBarNotification (0.1.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - FSLineChart
+  - HBStatusBarNotification
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -49,10 +51,11 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   FSLineChart: 1b8d3727e8feb323144126d381184bf1b15e6efc
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  HBStatusBarNotification: 9f545977b911928f75a0dfed4c21f423d065ac5b
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ReactiveKit: ced30f9647912f74510bd8179790cf2dfc9454c8
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 36fe7c9bc6b9ee314b7724ed12988926a549ee75
+PODFILE CHECKSUM: 7bd47139cee45376125cf4dcd02d2ecafcb790be
 
 COCOAPODS: 1.2.0

@@ -31,6 +31,7 @@ class PatientViewController: UIViewController {
     
     @IBOutlet weak var chartHeight: NSLayoutConstraint!
     
+    
     var patient: Patient!
     
     var graphTimer: Timer!
@@ -72,6 +73,16 @@ class PatientViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    var checkIn = true
+    @IBAction func checkInButtonPressed(_ sender: Any) {
+        if checkIn {
+            Patient.checkIn(patient.id)
+        } else {
+            Patient.checkOut(patient.id)
+        }
+        checkIn = !checkIn
     }
     
     func setupUI() {

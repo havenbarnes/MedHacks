@@ -26,6 +26,7 @@
 		81211D741F64974D003AA83D /* PatientTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81211D711F64974D003AA83D /* PatientTableModel.swift */; };
 		81211D751F64974D003AA83D /* PatientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81211D721F64974D003AA83D /* PatientTableViewCell.swift */; };
 		81211D761F64974D003AA83D /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81211D731F64974D003AA83D /* PatientTableViewController.swift */; };
+		814436F11F64F70E0019BD1A /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814436F01F64F70E0019BD1A /* BluetoothManager.swift */; };
 		815C3BAD1F638CB3006F0C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C3BAC1F638CB3006F0C94 /* AppDelegate.swift */; };
 		815C3BAF1F638CB3006F0C94 /* IDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C3BAE1F638CB3006F0C94 /* IDViewController.swift */; };
 		815C3BB21F638CB3006F0C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C3BB01F638CB3006F0C94 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		81211D711F64974D003AA83D /* PatientTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableModel.swift; sourceTree = "<group>"; };
 		81211D721F64974D003AA83D /* PatientTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewCell.swift; sourceTree = "<group>"; };
 		81211D731F64974D003AA83D /* PatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientTableViewController.swift; sourceTree = "<group>"; };
+		814436F01F64F70E0019BD1A /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		815C3BA91F638CB3006F0C94 /* MedHacksPatient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedHacksPatient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815C3BAC1F638CB3006F0C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		815C3BAE1F638CB3006F0C94 /* IDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,15 @@
 			path = Extensions/KeyboardAvoidingScrollView;
 			sourceTree = "<group>";
 		};
+		814436F21F64F71E0019BD1A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				814436F01F64F70E0019BD1A /* BluetoothManager.swift */,
+				815C3BDC1F639270006F0C94 /* MotionManager.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		815C3BA01F638CB3006F0C94 = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +172,7 @@
 				815C3BAC1F638CB3006F0C94 /* AppDelegate.swift */,
 				815C3BAE1F638CB3006F0C94 /* IDViewController.swift */,
 				81211D4E1F64963E003AA83D /* Patient */,
-				815C3BDC1F639270006F0C94 /* MotionManager.swift */,
+				814436F21F64F71E0019BD1A /* Core */,
 				815C3BB01F638CB3006F0C94 /* Main.storyboard */,
 				815C3BB31F638CB3006F0C94 /* Assets.xcassets */,
 				815C3BB51F638CB3006F0C94 /* LaunchScreen.storyboard */,
@@ -324,6 +335,7 @@
 				81211D691F6496EB003AA83D /* NSNumber+Extensions.swift in Sources */,
 				81211D6B1F6496EB003AA83D /* UIColor+Extensions.swift in Sources */,
 				81211D6C1F6496EB003AA83D /* UIImage+Extensions.swift in Sources */,
+				814436F11F64F70E0019BD1A /* BluetoothManager.swift in Sources */,
 				81211D751F64974D003AA83D /* PatientTableViewCell.swift in Sources */,
 				816E148F1F6413B7004F8D36 /* ScannerViewController.swift in Sources */,
 				81211D631F6496EB003AA83D /* Dictionary+Extensions.swift in Sources */,
