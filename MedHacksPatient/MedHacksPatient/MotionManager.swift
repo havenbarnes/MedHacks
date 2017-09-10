@@ -11,14 +11,7 @@ import CoreMotion
 
 protocol MotionManagerDelegate {
     func didUpdate(motion: Motion)
-    func didUpdate(orientation: Orientation)
-}
-
-enum Orientation: String {
-    case back = "Back"
-    case left = "Left Side"
-    case right = "Right Side"
-    case turning = "Turning"
+    func didUpdate(orientation: PatientStatus)
 }
 
 class Motion {

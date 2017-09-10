@@ -12,8 +12,6 @@ import SwiftyJSON
 import FirebaseDatabase
 import FSLineChart
 
-let patientImages = [#imageLiteral(resourceName: "person1"), #imageLiteral(resourceName: "person2"), #imageLiteral(resourceName: "person3"), #imageLiteral(resourceName: "person4"), #imageLiteral(resourceName: "person5")]
-
 class PatientViewController: UIViewController {
 
     @IBOutlet weak var topBar: UIView!
@@ -43,7 +41,7 @@ class PatientViewController: UIViewController {
         super.viewDidLoad()
     
         scrollView.alwaysBounceVertical = true
-        patientImageView.image = patientImages[Int(arc4random_uniform(UInt32(patientImages.count)))]
+        patientImageView.image = patient.image
         
         let ref = Database.database().reference()
         ref.child("patients/\(patient.id)").observe(.value, with: {
@@ -82,6 +80,14 @@ class PatientViewController: UIViewController {
         patient.room.bind(to: roomLabel)
         
         topBar.backgroundColor = patient.statusColor
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true, block: {
+            timer in
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.topBar.backgroundColor = self.patient.statusColor
+            })
+        })
+        
         orientationLabel.text = patient.status.value.rawValue
         patient.status.observeNext(with: {
             status in
@@ -155,7 +161,7 @@ class PatientViewController: UIViewController {
         movementValues.append(newValue)
         movementTimes.append(Date().longString)
         
-        self.chart?.labelForIndex = { self.movementTimes[Int($0)] }
+        //self.chart?.labelForIndex = { self.movementTimes[Int($0)] }
         
         self.chart?.clearData()
         self.chart?.setChartData(movementValues)

@@ -13,4 +13,11 @@ extension UIView {
         layer.cornerRadius = frame.width / 2
         print(frame.width)
     }
+    
+    func flash() {
+        self.alpha = 0
+        UIView.animate(withDuration: 0.3, delay: 0.5, options: [.repeat, .autoreverse], animations: {
+            self.alpha = 1
+        }, completion: nil)
+    }
 }

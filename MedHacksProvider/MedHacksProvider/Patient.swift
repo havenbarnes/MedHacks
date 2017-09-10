@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 import Bond
+import Firebase
 
 enum PatientStatus: String {
     case turning = "Turning"
@@ -38,6 +39,19 @@ enum PatientStatus: String {
         return status
     }
     
+    var jsonValue: String {
+        switch self {
+        case .left:
+            return "left"
+        case .back:
+            return "back"
+        case .right:
+            return "right"
+        default:
+            return "back"
+        }
+    }
+    
     var intValue: Int {
         switch self {
         case .left:
@@ -53,8 +67,11 @@ enum PatientStatus: String {
 }
 
 class Patient {
-    var id: Int
+    
+    var id: String
+    var image: UIImage?
     var name: Observable<String>
+    var interval: Observable<Int>
     var room: Observable<String>
     var notes: Observable<String>
     var status: Observable<PatientStatus>
@@ -63,8 +80,9 @@ class Patient {
     var deviceBattery: Observable<Int>
     
     init(_ json: JSON) {
-        id = json["id"].intValue
+        id = json["id"].stringValue
         name = Observable(json["name"].stringValue)
+        interval = Observable(json["interval"].intValue)
         room = Observable(json["room"].stringValue)
         notes = Observable(json["notes"].stringValue)
         status = Observable(PatientStatus.from(string: json["status"].stringValue))
@@ -73,12 +91,26 @@ class Patient {
         deviceBattery = Observable(json["client"]["battery"].intValue)
     }
     
-    var statusColor: UIColor? {
-        let startColor = UIColor.green
-        let endColor = UIColor.red
+    var needsAttention: Bool {
         let timeElapsed = Date().timeIntervalSince(lastRolled.value)
-        let percentage = CGFloat(timeElapsed / 7200)
-        if percentage > 1 { return UIColor.purple }
+        let percentage = CGFloat(timeElapsed / Double(interval.value))
+        return percentage > 1.0
+    }
+    
+    var statusColor: UIColor? {
+        let timeElapsed = Date().timeIntervalSince(lastRolled.value)
+        let percentage = CGFloat(timeElapsed / Double(interval.value))
+
+        var startColor: UIColor!
+        var endColor: UIColor!
+        if percentage < 0.5 {
+            startColor = UIColor.green
+            endColor = UIColor.yellow
+        } else {
+            startColor = UIColor.yellow
+            endColor = UIColor.red
+        }
+        
         return startColor.interpolateColorTo(end: endColor, fraction: percentage)
     }
 }

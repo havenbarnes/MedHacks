@@ -11,6 +11,8 @@ import Firebase
 import Bond
 import ReactiveKit
 
+let patientImages = [#imageLiteral(resourceName: "person1"), #imageLiteral(resourceName: "person7"), #imageLiteral(resourceName: "person2"), #imageLiteral(resourceName: "person3"), #imageLiteral(resourceName: "person4"), #imageLiteral(resourceName: "person5"), #imageLiteral(resourceName: "person6")]
+
 class PatientTableViewController: UIViewController {
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -28,6 +30,8 @@ class PatientTableViewController: UIViewController {
         viewModel.load()
         viewModel.patients.bind(to: tableView) { patients, indexPath, tableView in
             let cell = tableView.dequeueReusableCell(withIdentifier: "sbPatientCell", for: indexPath) as! PatientTableViewCell
+            let patient = self.viewModel.patients[indexPath.row]
+            patient.image = indexPath.row > 6 ? nil : patientImages[indexPath.row]
             cell.patient = patients[indexPath.row]
             return cell
         }
@@ -39,7 +43,6 @@ class PatientTableViewController: UIViewController {
             let patientViewController = self.instantiate("sbPatientViewController") as! PatientViewController
             patientViewController.patient = self.viewModel.patients[row]
             self.present(patientViewController, animated: true, completion: nil)
-    
         }
         
         let dateFormatter = DateFormatter()
