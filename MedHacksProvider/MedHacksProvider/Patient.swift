@@ -77,6 +77,8 @@ class Patient {
     var notes: Observable<String>
     var status: Observable<PatientStatus>
     var lastRolled: Observable<Date>
+    var lastCheckIn: Observable<Date>
+    var lastCheckOut: Observable<Date>
     var deviceName: Observable<String>
     var deviceBattery: Observable<Int>
     
@@ -88,6 +90,8 @@ class Patient {
         notes = Observable(json["notes"].stringValue)
         status = Observable(PatientStatus.from(string: json["status"].stringValue))
         lastRolled = Observable(json["lastRolled"].dateValue)
+        lastCheckIn = Observable(json["checkInTime"].dateValue)
+        lastCheckOut = Observable(json["checkOutTime"].dateValue)
         deviceName = Observable(json["client"]["name"].stringValue)
         deviceBattery = Observable(json["client"]["battery"].intValue)
     }
@@ -101,7 +105,7 @@ class Patient {
             snapshot in
             
             ref.child("providers/1/lastPatient").setValue(snapshot.value)
-            HBStatusBarNotification(message: "Checked In With \(String(describing: snapshot.value))", backgroundColor: UIColor.blue).show()
+            HBStatusBarNotification(message: "Checked In With \(snapshot.value as! String)", backgroundColor: UIColor.blue).show()
         })
         
     }

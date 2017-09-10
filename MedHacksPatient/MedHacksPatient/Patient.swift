@@ -76,6 +76,7 @@ class Patient {
     var notes: Observable<String>
     var status: Observable<PatientStatus>
     var lastRolled: Observable<Date>
+    var lastProviderId: Observable<String>
     var deviceName: Observable<String>
     var deviceBattery: Observable<Int>
     
@@ -87,6 +88,7 @@ class Patient {
         notes = Observable(json["notes"].stringValue)
         status = Observable(PatientStatus.from(string: json["status"].stringValue))
         lastRolled = Observable(json["lastRolled"].dateValue)
+        lastProviderId = Observable(json["lastProvider"].stringValue)
         deviceName = Observable(json["client"]["name"].stringValue)
         deviceBattery = Observable(json["client"]["battery"].intValue)
     }

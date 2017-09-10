@@ -71,18 +71,18 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     
     func analyzeRSSI(_ rssi: Int) {
         if !checkedIn {
-            if rssi > -38 {
+            if rssi > -30 {
                 accumulator += 1
                 timer?.invalidate()
                 timer = nil
-                timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: {
+                timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {
                     timer in
                     
                     self.accumulator = 0
                 })
             }
             
-            if accumulator == 10 {
+            if accumulator == 30 {
                 accumulator = 0
                 print("CHECK IN")
                 checkedIn = true
@@ -93,14 +93,14 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
                 accumulator += 1
                 timer?.invalidate()
                 timer = nil
-                timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: {
+                timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {
                     timer in
                     
                     self.accumulator = 0
                 })
             }
             
-            if accumulator == 10 {
+            if accumulator == 30 {
                 accumulator = 0
                 print("CHECK OUT")
                 checkedIn = false

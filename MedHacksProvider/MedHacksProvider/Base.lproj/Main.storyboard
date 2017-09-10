@@ -61,7 +61,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="John" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GUv-TF-cLZ">
-                                                    <rect key="frame" x="68" y="18" width="195" height="29"/>
+                                                    <rect key="frame" x="68" y="18" width="164" height="29"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O4-zH-C49">
-                                                    <rect key="frame" x="136.5" y="45.5" width="126.5" height="18"/>
+                                                    <rect key="frame" x="136.5" y="45.5" width="95.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -109,14 +109,21 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stethoscope" translatesAutoresizingMaskIntoConstraints="NO" id="gD7-JU-brZ">
+                                                    <rect key="frame" x="239.5" y="28" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="ZC7-ul-t4u"/>
+                                                        <constraint firstAttribute="width" constant="25" id="ocg-pr-MWx"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="AcK-1T-yPs" firstAttribute="leading" secondItem="eVA-eX-I6M" secondAttribute="trailing" constant="8.5" id="0H8-cO-i2F"/>
                                                 <constraint firstItem="7O4-zH-C49" firstAttribute="leading" secondItem="LET-0h-HQc" secondAttribute="trailing" id="5jS-xD-621"/>
                                                 <constraint firstItem="7O4-zH-C49" firstAttribute="baseline" secondItem="LET-0h-HQc" secondAttribute="baseline" id="6vH-ik-JLI"/>
                                                 <constraint firstItem="eVA-eX-I6M" firstAttribute="centerY" secondItem="caC-cj-TIZ" secondAttribute="centerY" id="A37-Zr-ajz"/>
+                                                <constraint firstItem="eVA-eX-I6M" firstAttribute="leading" secondItem="gD7-JU-brZ" secondAttribute="trailing" constant="6" id="GJ5-oe-BGW"/>
                                                 <constraint firstItem="gUK-wW-bQ8" firstAttribute="centerY" secondItem="caC-cj-TIZ" secondAttribute="centerY" id="HnQ-86-TUt"/>
-                                                <constraint firstItem="eVA-eX-I6M" firstAttribute="leading" secondItem="GUv-TF-cLZ" secondAttribute="trailing" constant="8" id="J2Z-mu-w4O"/>
                                                 <constraint firstItem="GUv-TF-cLZ" firstAttribute="leading" secondItem="caC-cj-TIZ" secondAttribute="leadingMargin" constant="60" id="V84-yi-Cqc"/>
                                                 <constraint firstItem="7O4-zH-C49" firstAttribute="trailing" secondItem="GUv-TF-cLZ" secondAttribute="trailing" id="b8v-Cp-8V0"/>
                                                 <constraint firstItem="GUv-TF-cLZ" firstAttribute="leading" secondItem="gUK-wW-bQ8" secondAttribute="trailing" constant="8" id="fGb-Do-1Az"/>
@@ -125,16 +132,19 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="LET-0h-HQc" secondAttribute="bottom" constant="8.5" id="ncO-qE-BLf"/>
                                                 <constraint firstItem="GUv-TF-cLZ" firstAttribute="top" secondItem="caC-cj-TIZ" secondAttribute="topMargin" constant="10" id="r9W-8L-lSD"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="AcK-1T-yPs" secondAttribute="trailing" id="sF8-5x-iSr"/>
+                                                <constraint firstItem="gD7-JU-brZ" firstAttribute="leading" secondItem="GUv-TF-cLZ" secondAttribute="trailing" constant="7.5" id="sMA-Vy-BEj"/>
                                                 <constraint firstItem="gUK-wW-bQ8" firstAttribute="leading" secondItem="caC-cj-TIZ" secondAttribute="leadingMargin" constant="4" id="ybT-fv-UEf"/>
                                                 <constraint firstItem="LET-0h-HQc" firstAttribute="top" secondItem="GUv-TF-cLZ" secondAttribute="bottom" constant="-1.5" id="zdu-jc-Dq7"/>
+                                                <constraint firstItem="gD7-JU-brZ" firstAttribute="centerY" secondItem="eVA-eX-I6M" secondAttribute="centerY" id="zpR-yo-GuZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="GUv-TF-cLZ" id="DDH-SM-2To"/>
-                                            <outlet property="patientImage" destination="gUK-wW-bQ8" id="wUK-dh-gZh"/>
+                                            <outlet property="patientImage" destination="gUK-wW-bQ8" id="2dH-lI-aYz"/>
                                             <outlet property="roomLabel" destination="eVA-eX-I6M" id="82k-3k-HmA"/>
                                             <outlet property="statusLabel" destination="7O4-zH-C49" id="1i2-el-hIb"/>
                                             <outlet property="statusView" destination="AcK-1T-yPs" id="s47-vP-ofl"/>
+                                            <outlet property="stethoscopeImage" destination="gD7-JU-brZ" id="snY-El-BB5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -413,5 +423,6 @@
     <resources>
         <image name="down" width="172" height="101"/>
         <image name="person1" width="275" height="183"/>
+        <image name="stethoscope" width="32" height="32"/>
     </resources>
 </document>

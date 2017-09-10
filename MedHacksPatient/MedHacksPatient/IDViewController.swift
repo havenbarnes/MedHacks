@@ -60,6 +60,28 @@ class IDViewController: UIViewController, MotionManagerDelegate {
             
         })
         
+        var firstRead = true
+        ref.child("patients/\(patient.id)/checkInTime").observe(.value, with: {
+            snapshot in
+            
+            ref.child("patients/\(self.patient.id)/lastProvider").observe(.value, with: {
+                snapshot in
+                
+                let docId = "\(snapshot.value ?? "")"
+                guard !firstRead else {
+                    firstRead = false
+                    return
+                }
+                
+                ref.child("providers/\(docId)/name").observeSingleEvent(of: .value, with: {
+                    snapshot in
+                    
+                    let name = "\(snapshot.value ?? "")"
+                    HBStatusBarNotification(message: "\(name) checked in with you.", backgroundColor: UIColor.blue).show()
+                })
+            })
+        })
+        
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {
             timer in
             

@@ -15,6 +15,7 @@ class PatientTableViewCell: UITableViewCell {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var patientImage: UIImageView!
     
+    @IBOutlet weak var stethoscopeImage: UIImageView!
     var patient: Patient! {
         didSet {
             patient.name.bind(to: nameLabel)
@@ -27,7 +28,12 @@ class PatientTableViewCell: UITableViewCell {
                 UIView.animate(withDuration: 0.3, animations: {
                     self.statusView.backgroundColor = self.patient.statusColor
                 })
+        
             })
+            
+            let deltaCheckIn = Date().timeIntervalSince(patient.lastCheckIn.value)
+            let deltaCheckOut = Date().timeIntervalSince(patient.lastCheckOut.value)
+            stethoscopeImage.isHidden = !(deltaCheckIn < deltaCheckOut)
             
             if patient.needsAttention {
                 statusView.flash()

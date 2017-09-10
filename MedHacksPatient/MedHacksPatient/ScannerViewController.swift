@@ -70,7 +70,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     fileprivate func captureDevice(with position: AVCaptureDevicePosition) -> AVCaptureDevice? {
-        let devices = AVCaptureDeviceDiscoverySession(deviceTypes: [ .builtInWideAngleCamera, .builtInMicrophone, .builtInDualCamera, .builtInTelephotoCamera ], mediaType: AVMediaTypeVideo, position: .unspecified).devices
+        let devices = AVCaptureDeviceDiscoverySession(deviceTypes: [ .builtInWideAngleCamera, .builtInMicrophone, .builtInTelephotoCamera ], mediaType: AVMediaTypeVideo, position: .unspecified).devices
         
         if let devices = devices {
             for device in devices {
