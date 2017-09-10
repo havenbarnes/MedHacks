@@ -103,6 +103,7 @@ class IDViewController: UIViewController, MotionManagerDelegate {
     }
     
     func didUpdate(orientation: PatientStatus) {
+        if !running { return }
         if orientation == .turning {
             layingOnLabel.isHidden = true
             orientationLabel.text = "Turning"
