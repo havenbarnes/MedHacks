@@ -15,7 +15,7 @@ extension UIView {
     }
     
     func flash() {
-        UIView.animate(withDuration: 0.3, delay: 0.5, options: [.repeat, .autoreverse], animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.4, options: [.repeat, .autoreverse], animations: {
             self.backgroundColor = self.backgroundColor?.darker(by: 60)
         }, completion: nil)
     }

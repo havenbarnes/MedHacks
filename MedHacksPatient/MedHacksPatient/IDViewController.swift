@@ -16,6 +16,8 @@ class IDViewController: UIViewController, MotionManagerDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var switchPatientButton: UIButton!
     
+    @IBOutlet weak var backgroundColorView: UIView!
+    
     @IBOutlet weak var patientImageView: UIImageView!
     @IBOutlet weak var patientNameLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
@@ -32,7 +34,7 @@ class IDViewController: UIViewController, MotionManagerDelegate {
         
         patient = App.shared.patient
         patientImageView.image = patient.image
-        view.backgroundColor = patient.statusColor
+        backgroundColorView.backgroundColor = patient.statusColor
         recordButton.setTitleColor(patient.statusColor, for: .normal)
         switchPatientButton.setTitleColor(patient.statusColor, for: .normal)
         
@@ -59,13 +61,13 @@ class IDViewController: UIViewController, MotionManagerDelegate {
             timer in
             
             UIView.animate(withDuration: 0.3, animations: {
-                self.view.backgroundColor = self.patient.statusColor
+                self.backgroundColorView.backgroundColor = self.patient.statusColor
                 self.recordButton.setTitleColor(self.patient.statusColor, for: .normal)
                 self.switchPatientButton.setTitleColor(self.patient.statusColor, for: .normal)
             })
             
             if self.patient.needsAttention {
-                self.view.flash()
+                self.backgroundColorView.flash()
             }
         })
         
